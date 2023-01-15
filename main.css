@@ -3,12 +3,23 @@
     display: grid;
     margin: 20px;
     height: 500px;
-    /* grid-gap: 10px; */
+    grid-gap: 10px;
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: 5rem minmax(10px,auto) 100px;
     grid-template-areas: "header header header header"
                          "side main main main"
                          "footer footer footer footer"
+}
+
+@media (max-width: 40rem) {
+    .container {
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: 5rem minmax(10px,auto) 150px 100px;
+        grid-template-areas: "header header header header"
+                             "main main main main"
+                             "side side side side"
+                              "footer footer footer footer"
+    }
 }
 
 .el1 {
